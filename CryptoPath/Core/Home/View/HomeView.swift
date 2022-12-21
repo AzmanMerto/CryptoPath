@@ -9,7 +9,20 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                // top movers view
+                TopMoversView()
+                
+                Divider()
+                
+                // all coins view
+                AllCoinsView()
+                
+            }.navigationTitle("Live Pricase")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
